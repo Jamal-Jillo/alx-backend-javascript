@@ -1,0 +1,23 @@
+{
+  "name": "alx-backend-javascript",
+  "version": "1.0.0",
+  "description": "Learning JS",
+  "main": "0-main.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node -- src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamal-Jillo/alx-backend-javascript.git"
+  },
+  "author": "Jamal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jamal-Jillo/alx-backend-javascript/issues"
+  },
+  "homepage": "https://github.com/Jamal-Jillo/alx-backend-javascript#readme"
+}
