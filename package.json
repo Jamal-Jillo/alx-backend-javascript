@@ -2,7 +2,7 @@
   "name": "alx-backend-javascript",
   "version": "1.0.0",
   "description": "Learning JS",
-  "main": "0-main.js",
+  "main": "nodesource_setup.sh",
   "scripts": {
     "dev": "nodemon --exec babel-node -- src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
