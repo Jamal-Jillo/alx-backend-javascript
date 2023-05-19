@@ -1,6 +1,7 @@
 const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./4-payment');
 const Utils = require('./utils');
+const { expect } = require('chai');
 
 describe('sendPaymentRequestToApi', () => {
   let calculateNumberStub;
@@ -22,12 +23,7 @@ describe('sendPaymentRequestToApi', () => {
 
     sendPaymentRequestToApi(totalAmount, totalShipping);
 
-    sinon.assert.calledWithExactly(
-      calculateNumberStub,
-      'SUM',
-      totalAmount,
-      totalShipping
-    );
+    expect(calculateNumberStub.calledOnceWithExactly('SUM', totalAmount, totalShipping)).to.be.true;
   });
 
   it('should log the correct message', () => {
@@ -36,9 +32,6 @@ describe('sendPaymentRequestToApi', () => {
 
     sendPaymentRequestToApi(totalAmount, totalShipping);
 
-    sinon.assert.calledWithExactly(
-      consoleLogSpy,
-      'The total is: 10'
-    );
+    expect(consoleLogSpy.calledOnceWithExactly('The total is: 10')).to.be.true;
   });
 });
